@@ -1,28 +1,14 @@
-body{
-  background-color:rgb(134, 200, 83);}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./sea.jpg');
+  background-color: #f2f2f2;
+}
 
-
-
-   canvas{
-    
-    background-color: white;
-    width:500px;
-    height:600px;
-    margin:10px;
-    border:5px solid grey;
-    
-  }
+canvas {
   
-  h1{
-    padding-left: 503px;
-    color:black;
-  }
-  h2{
-    
-    font-size:30px;
-    color:rgb(128, 47, 0);
-  }
-  h3{
-    font-size:30px;
-    color:purple;
-  }
+  width: 430px;
+  height: 480px;
+  margin: 10px;
+  border: 5px solid grey;
+}
