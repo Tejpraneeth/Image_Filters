@@ -1,10 +1,11 @@
-var image;
+var image=null;
 function clearcanvas(){
   if(image!=null){
   var canvas=document.getElementById("can");
   const context = canvas.getContext('2d');
   context.clearRect(0, 0, canvas.width, canvas.height);
   image=null;
+  location.reload()
   alert('Image cleared ! Now you can upload new image')
 }}
 function upload(){
@@ -14,15 +15,19 @@ function upload(){
   image.drawTo(canvas);
 }
 function resetimage(){
+  if(image!=null){
 var canvas=document.getElementById("can");
   var fileinput=document.getElementById("finput");
   image=new SimpleImage(fileinput);
-  image.drawTo(canvas);}
+  image.drawTo(canvas);}}
 
 //BLACK N WHITE FILTER//
 function makegrayscale(){
-  if (image == null ||!image.complete()) {
+  if (image == null ) {
     alert("Image not uploaded, Please upload an image");
+  }
+  else if(!image.complete()){
+    alert("Grayscale filter has been applied already!");
   }
   else{
   for(var pixel of image.values()){
@@ -38,9 +43,13 @@ var fileinput=document.getElementById("finput");
 }
 //DULL FILTER
 function makedull(){
-  if (image == null ||!image.complete()) {
-    alert("Image not uploaded,Please upload an image");
+  if (image == null ) {
+    alert("Image not uploaded, Please upload an image");
   }
+  else if(!image.complete()){
+    alert("Dull filter has been applied already!");
+  }
+
   else{
   for(var pixel of image.values()){
   
@@ -55,8 +64,11 @@ var fileinput=document.getElementById("finput");
 }
 //RED FILTER//
 function makered(){
-   if (image == null|| !image.complete() ) {
-     alert("Image not uploaded,Please upload an image");
+  if (image == null ) {
+    alert("Image not uploaded, Please upload an image");
+  }
+  else if(!image.complete()){
+    alert("Red filter has been applied already!");
   }
   else{
   for(var pixel of image.values()){
@@ -77,8 +89,11 @@ var fileinput=document.getElementById("finput");
 
 //GREEN FILTER//
 function makegreen(){
-   if (image == null|| !image.complete() ) {
-     alert("Image not uploaded,Please upload an image");
+  if (image == null ) {
+    alert("Image not uploaded, Please upload an image");
+  }
+  else if(!image.complete()){
+    alert("Green filter has been applied already!");
   }
   else{
   for(var pixel of image.values()){
@@ -100,8 +115,11 @@ var fileinput=document.getElementById("finput");
 
 //BLUE FILTER//
 function makeblue(){
-   if (image == null || !image.complete() ) {
-     alert("Image not uploaded,Please upload an image");
+  if (image == null ) {
+    alert("Image not uploaded, Please upload an image");
+  }
+  else if(!image.complete()){
+    alert("Blue filter has been applied already!");
   }
   else{
   for(var pixel of image.values()){
