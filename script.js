@@ -156,7 +156,6 @@ if(avg<128){
   }
   var imgcanvas=document.getElementById("can");
   image.drawTo(imgcanvas);
-
   var fileinput=document.getElementById("finput");
   image=new SimpleImage(fileinput);}
 }
