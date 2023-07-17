@@ -62,6 +62,27 @@ function makedull(){
 var fileinput=document.getElementById("finput");
   image=new SimpleImage(fileinput);}
 }
+// BRIGHT FILTER
+function makebright(){
+  if (image == null ) {
+    alert("Image not uploaded, Please upload an image");
+  }
+  else if(!image.complete()){
+    alert("Bright filter has been applied already!");
+  }
+
+  else{
+  for(var pixel of image.values()){
+  
+    pixel.setRed(3*pixel.getRed()/2);
+    pixel.setGreen(3*pixel.getGreen()/2);
+    pixel.setBlue(3*pixel.getBlue()/2);
+  }
+  var imgcanvas=document.getElementById("can");
+  image.drawTo(imgcanvas);
+var fileinput=document.getElementById("finput");
+  image=new SimpleImage(fileinput);}
+}
 //RED FILTER//
 function makered(){
   if (image == null ) {
