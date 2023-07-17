@@ -156,7 +156,7 @@ if(avg<128){
   }
   var imgcanvas=document.getElementById("can");
   image.drawTo(imgcanvas);
-  https://codepen.io/cpe/pen/export/QWmagVZ
+
   var fileinput=document.getElementById("finput");
   image=new SimpleImage(fileinput);}
 }
